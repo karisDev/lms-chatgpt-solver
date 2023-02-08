@@ -1,0 +1,25 @@
+{
+  "name": "LMS ChatGPT Solver",
+  "description": "Решение мисисовского LMS Canvas с помощью нейросетей",
+  "version": "0.1.0",
+  "manifest_version": 3,
+  "permissions": ["webRequest"],
+  "host_permissions": ["*://lms.misis.ru/*"],
+  "web_accessible_resources": [
+    {
+      "resources": ["solver.css"],
+      "matches": ["*://lms.misis.ru/*"],
+      "use_dynamic_url": true
+    }
+  ],
+  "action": {
+    "default_title": "ChatGPT Solver",
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://lms.misis.ru/*"],
+      "js": ["content.js"]
+    }
+  ]
+}
