@@ -19,7 +19,7 @@
   "content_scripts": [
     {
       "matches": ["*://lms.misis.ru/*"],
-      "js": ["content.js"]
+      "js": ["content.js", "api_key.js"]
     }
   ]
 }
